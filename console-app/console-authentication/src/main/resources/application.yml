@@ -1,0 +1,22 @@
+dubbo:
+  protocol:
+    port: 20880
+    name: dubbo
+  application:
+    name: console-authentication-app
+  registry:
+    address: zookeeper://127.0.0.1:2181
+    timeout: 30000
+  packageName: com.tdh.gps.console
+
+server:
+  port: 8080
+  session:
+   timeout: 300
+   
+sso:
+ security:
+  oauth2:
+   storeType: jwt
+  jwt:
+   signingKey: awbeci

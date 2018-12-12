@@ -1,0 +1,32 @@
+#dubbo:
+#  protocol:
+#    port: 20880
+#    name: dubbo
+#  application:
+#    name: console-web-app
+#  registry:
+#    address: zookeeper://127.0.0.1:2181
+#    timeout: 30000
+#  packageName: com.tdh.gps.console
+
+server:
+  port: 9001
+  session:
+    timeout: 300
+security:
+  basic:
+    enabled: false
+
+tdh:
+  security:
+    authentication:
+      url: http://127.0.0.1:8080/oauth/token
+      grantType: password
+      clientId: my-trusted-client
+      secret: secret
+    redisKey: tdh.security.token
+spring:
+  redis:
+    database: 0
+    host: 127.0.0.1
+    port: 6379
